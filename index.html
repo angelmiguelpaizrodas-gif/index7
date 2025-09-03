@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Historia y Tipos de Dinosaurios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0f8ff; /* Azul muy claro */
+            --primary-color: #2e8b57; /* Verde oscuro, como el de los bosques antiguos */
+            --secondary-color: #a0522d; /* Marrón, como la tierra */
+            --text-color: #333;
+            --light-text-color: #fff;
+            --card-bg: #fff;
+            --border-color: #c0c0c0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 50px 0;
+            text-align: center;
+            border-bottom: 8px solid var(--secondary-color);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--secondary-color) 50%, #c00 50%, #c00 100%);
+            /* Esto es un ejemplo de un efecto de borde */
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 3px solid var(--secondary-color);
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background-color: var(--secondary-color);
+            border: 3px solid var(--card-bg);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .dinosaur-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .dinosaur-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .dinosaur-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .dinosaur-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dinosaur-info {
+            padding: 15px;
+        }
+
+        .dinosaur-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .dinosaur-info p {
+            font-size: 0.9em;
+            color: #555;
+            margin: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>El Reino de los Gigantes</h1>
+            <p>Un viaje al pasado para descubrir a los dinosaurios</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2 class="section-title">La Era Mesozoica: El Reinado de los Dinosaurios</h2>
+            <p>La historia de los dinosaurios se extiende a lo largo de la Era Mesozoica, un período geológico que abarca desde hace aproximadamente 252 a 66 millones de años. Esta era se divide en tres períodos principales:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Período Triásico (hace 252 - 201 millones de años)</h3>
+                    <p>El Triásico marcó el inicio de la era de los dinosaurios. Surgieron los primeros dinosaurios, que eran en su mayoría pequeños y bípedos, y coexistieron con otros reptiles dominantes. El supercontinente Pangea comenzó a fragmentarse.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Período Jurásico (hace 201 - 145 millones de años)</h3>
+                    <p>Durante el Jurásico, los dinosaurios alcanzaron su máxima diversidad y tamaño. Gigantes como el Brachiosaurus y el Diplodocus vagaban por la Tierra. Las aves primitivas hicieron su primera aparición, y los mamíferos seguían siendo pequeños y discretos.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Período Cretácico (hace 145 - 66 millones de años)</h3>
+                    <p>El Cretácico vio el apogeo de los dinosaurios, con depredadores icónicos como el Tyrannosaurus Rex y herbívoros blindados como el Triceratops. Sin embargo, este período terminó abruptamente con el evento de extinción masiva, causado probablemente por el impacto de un asteroide gigante.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Tipos de Dinosaurios</h2>
+            <p>Los dinosaurios se clasifican principalmente en dos grandes grupos según la estructura de su cadera. Dentro de estos, hay una increíble diversidad de especies.</p>
+
+            <div class="dinosaur-grid">
+                
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/8b0000/fff?text=T-Rex" alt="Tyrannosaurus Rex" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Tyrannosaurus Rex</h3>
+                        <p><strong>Clasificación:</strong> Terópodo (Saurisquio)</p>
+                        <p><strong>Dieta:</strong> Carnívoro</p>
+                        <p><strong>Descripción:</strong> Uno de los mayores depredadores terrestres de todos los tiempos. Un gigante bípedo con dientes de sierra.</p>
+                    </div>
+                </div>
+
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/4b0082/fff?text=Triceratops" alt="Triceratops" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Triceratops</h3>
+                        <p><strong>Clasificación:</strong> Ceratopsiano (Ornitísquio)</p>
+                        <p><strong>Dieta:</strong> Herbívoro</p>
+                        <p><strong>Descripción:</strong> Famoso por sus tres cuernos faciales y un gran volante óseo en el cuello para defensa.</p>
+                    </div>
+                </div>
+
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/1e90ff/fff?text=Brachiosaurus" alt="Brachiosaurus" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Brachiosaurus</h3>
+                        <p><strong>Clasificación:</strong> Saurópodo (Saurisquio)</p>
+                        <p><strong>Dieta:</strong> Herbívoro</p>
+                        <p><strong>Descripción:</strong> Un saurópodo de cuello largo, conocido por sus patas delanteras más largas que las traseras.</p>
+                    </div>
+                </div>
+
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/808000/fff?text=Velociraptor" alt="Velociraptor" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Velociraptor</h3>
+                        <p><strong>Clasificación:</strong> Dromeosáurido (Saurisquio)</p>
+                        <p><strong>Dieta:</strong> Carnívoro</p>
+                        <p><strong>Descripción:</strong> Un pequeño y veloz depredador con una garra en forma de hoz en cada pie, cazaba en manadas.</p>
+                    </div>
+                </div>
+
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/cd853f/fff?text=Stegosaurus" alt="Stegosaurus" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Stegosaurus</h3>
+                        <p><strong>Clasificación:</strong> Estegosaurio (Ornitísquio)</p>
+                        <p><strong>Dieta:</strong> Herbívoro</p>
+                        <p><strong>Descripción:</strong> Famoso por las grandes placas óseas en su lomo y las púas en la punta de su cola.</p>
+                    </div>
+                </div>
+
+                <div class="dinosaur-card">
+                    <img src="https://via.placeholder.com/400x300/6a5acd/fff?text=Pteranodon" alt="Pteranodon" class="dinosaur-image">
+                    <div class="dinosaur-info">
+                        <h3>Pteranodon</h3>
+                        <p><strong>Clasificación:</strong> Pterosaurio (Reptil volador)</p>
+                        <p><strong>Dieta:</strong> Piscívoro</p>
+                        <p><strong>Descripción:</strong> Aunque no es técnicamente un dinosaurio, es un reptil volador de la misma era. Conocido por su enorme cresta en la cabeza.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Diseño y contenido creado con fines educativos.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
